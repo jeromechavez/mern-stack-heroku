@@ -8,8 +8,13 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node .",
-    "postinstall": "browserify -g uglifyify -t babelify client/ -o server/public/main.js",
-    "heroku-postbuild": "node database/setup.js"
+    "build": "browserify -g uglifyify -t babelify client/ -o server/public/main.js",
+    "seed": "node database/setup.js",
+    "watch:server": "nodemon .",
+    "watch:client": "watchify -vd -t babelify client/ -o server/public/main.js",
+    "watch": "npm-run-all --parallel watch:*",
+    "postinstall": "npm run watch",
+    "heroku-postbuild": "npm run seed"
   },
   "babel": {
     "plugins": [
