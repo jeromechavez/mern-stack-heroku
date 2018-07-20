@@ -1,9 +1,6 @@
 {
   "name": "mern-stack",
   "version": "1.0.0",
-  "engine": {
-    "node": "10.6.0"
-  },
   "description": "",
   "main": "server/index.js",
   "scripts": {
@@ -12,9 +9,7 @@
     "seed": "node database/setup.js",
     "watch:server": "nodemon .",
     "watch:client": "watchify -vd -t babelify client/ -o server/public/main.js",
-    "watch": "npm-run-all --parallel watch:*",
-    "postinstall": "npm run build",
-    "heroku-postbuild": "npm run seed"
+    "watch": "npm-run-all --parallel watch:*"
   },
   "babel": {
     "plugins": [
