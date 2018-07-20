@@ -5,7 +5,7 @@ const seed = require('./seed')
 MongoClient
   .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(client => {
-    const db = client.db('flash-cards')
+    const db = client.db('heroku_9vtlc56j')
     const collection = db.collection('cards')
     return collection
       .deleteMany({})

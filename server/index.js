@@ -12,7 +12,7 @@ MongoClient
     process.exit(1)
   })
   .then(client => {
-    const db = client.db('flash-cards')
+    const db = client.db('heroku_9vtlc56j')
     const collection = db.collection('cards')
     const publicPath = path.join(__dirname, 'public/') 
     express()
