@@ -13,8 +13,8 @@
     "watch:server": "nodemon .",
     "watch:client": "watchify -vd -t babelify client/ -o server/public/main.js",
     "watch": "npm-run-all --parallel watch:*",
-    "postinstall": "npm run build",
-    "heroku-postbuild": "npm run seed"
+    "postinstall": "browserify -g uglifyify -t babelify client/ -o server/public/main.js",
+    "heroku-postbuild": "node database/setup.js"
   },
   "babel": {
     "plugins": [
