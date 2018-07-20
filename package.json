@@ -1,6 +1,12 @@
 {
   "name": "mern-stack",
   "version": "1.0.0",
+<<<<<<< HEAD:package.json
+=======
+  "engines": {
+    "node": "10.6.0"
+  },
+>>>>>>> 0390a1f4e2052818f9137e907610c95749aaceef:mern-stack/package.json
   "description": "",
   "main": "server/index.js",
   "scripts": {
